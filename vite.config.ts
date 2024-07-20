@@ -1,14 +1,18 @@
 import { UserConfig, defineConfig } from "vite";
 import path from "path";
 import builtins from "builtin-modules";
-import react from "@vitejs/plugin-react";
+// import react from "@vitejs/plugin-react";
+import solid from "vite-plugin-solid";
 
 export default defineConfig(async ({ mode }) => {
 	const { resolve } = path;
 	const prod = mode === "production";
 
 	return {
-		plugins: [react()],
+		plugins: [
+			//react(),
+			solid(),
+		],
 		build: {
 			lib: {
 				entry: resolve(__dirname, "src/main.tsx"),

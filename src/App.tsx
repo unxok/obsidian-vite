@@ -6,7 +6,7 @@ function App(props: { source: string; ctx: MarkdownPostProcessorContext }) {
 
 	return (
 		<>
-			<p>I am a custom code block!</p>
+			<p>I am a custom code block! Solid</p>
 			<p>You entered: {props.source}</p>
 		</>
 	);

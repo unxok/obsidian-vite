@@ -1,5 +1,8 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
+// import React from "react";
+// import { createRoot } from "react-dom/client";
+
+import { render } from "solid-js/web";
+
 import App from "./App.tsx";
 import "./index.css";
 import { Notice, Plugin } from "obsidian";
@@ -14,14 +17,25 @@ export default class ObsidianVite extends Plugin {
 			"obsidian-vite",
 			(source, el, ctx) => {
 				el.empty();
-				const root = createRoot(el);
-				root.render(
-					<React.StrictMode>
+
+				// const root = createRoot(el);
+				// root.render(
+				// 	<React.StrictMode>
+				// 		<App
+				// 			source={source}
+				// 			ctx={ctx}
+				// 		/>
+				// 	</React.StrictMode>
+				// );
+
+				render(
+					() => (
 						<App
 							source={source}
 							ctx={ctx}
 						/>
-					</React.StrictMode>
+					),
+					el
 				);
 			}
 		);

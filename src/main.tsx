@@ -8,38 +8,31 @@ import "./index.css";
 import { Notice, Plugin } from "obsidian";
 
 export default class ObsidianVite extends Plugin {
-	onload(): void {
-		const str = "we out here";
-		new Notice(str);
-		console.log(str);
+  onload(): void {
+    const str = "we out here";
+    new Notice(str);
+    console.log(str);
 
-		this.registerMarkdownCodeBlockProcessor(
-			"obsidian-vite",
-			(source, el, ctx) => {
-				el.empty();
+    this.registerMarkdownCodeBlockProcessor(
+      "obsidian-vite",
+      (source, el, ctx) => {
+        el.empty();
+        el.classList.toggle("twcss", true);
 
-				// const root = createRoot(el);
-				// root.render(
-				// 	<React.StrictMode>
-				// 		<App
-				// 			source={source}
-				// 			ctx={ctx}
-				// 		/>
-				// 	</React.StrictMode>
-				// );
+        // const root = createRoot(el);
+        // root.render(
+        // 	<React.StrictMode>
+        // 		<App
+        // 			source={source}
+        // 			ctx={ctx}
+        // 		/>
+        // 	</React.StrictMode>
+        // );
 
-				render(
-					() => (
-						<App
-							source={source}
-							ctx={ctx}
-						/>
-					),
-					el
-				);
-			}
-		);
-	}
+        render(() => <App source={source} ctx={ctx} />, el);
+      },
+    );
+  }
 }
 
 // ReactDOM.createRoot(document.getElementById('root')!).render(

@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+# obsidian-vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a template repository for an [Obsidian](obsidian.com) plugin bundled with [Vitejs](https://vitejs.dev).
 
-Currently, two official plugins are available:
+## Out of the box support
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Typescript](https://www.typescriptlang.org)
+- [React](https://react.dev) or [Solid](https://solidjs.com)
+- [Tailwindcss](https://tailwindcss.com)
 
-## Expanding the ESLint configuration
+## Usage
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+> [!NOTE]
+> You must run `npm run build` to bundle and be able to use the plugin. Eventually, I would like to have a way to write to a file instead of the default dev server approach vite takes for dev builds.
 
-- Configure the top-level `parserOptions` property like this:
+- `main.js` and `styles.css` output to the root directory of the repo. Place the repo in `/yourvault/.obsidian/plugins/` to be able to test out your plugin.
+- Tailwind is scoped to children of an element with the `twcss` class. Make sure your view/codeblock/whatever has this class to enable tw utility classes for its children.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Replace the following words in all files to your liking:
+   - obsidian-vite
+   - Obsidian Vite
+   - Obisidian Vite Plugin
+   - ObsidianVite
+2. Look over `/manifest.json` and adjust as needed.
+3. Look over `/tsconfig.app.json`, `/vite.config.ts`, `/src/main.tsx` and comment/uncomment depending on whether you want to use React or Solid.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# License
+
+MIT
+
+# Contributing
+
+- Open an issue for bugs and feature requests
+- PRs welcome!

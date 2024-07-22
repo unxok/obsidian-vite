@@ -10,8 +10,7 @@ This is a template repository for an [Obsidian](obsidian.com) plugin bundled wit
 
 ## Usage
 
-> [!NOTE]
-> You must run `npm run build` to bundle and be able to use the plugin. Eventually, I would like to have a way to write to a file instead of the default dev server approach vite takes for dev builds.
+- `npm run dev` will automatically watch and build your plugin when you save changes. If using the [hot-reload](https://github.com/pjeby/hot-reload?tab=ISC-1-ov-file#readme) plugin, you may want to use [my PR](https://github.com/pjeby/hot-reload/pull/15) to ensure rendering-related changes are hot reloaded correctly.
 
 - `main.js` and `styles.css` output to the root directory of the repo. Place the repo in `/yourvault/.obsidian/plugins/` to be able to test out your plugin.
 - Tailwind is scoped to children of an element with the `twcss` class. Make sure your view/codeblock/whatever has this class to enable tw utility classes for its children.

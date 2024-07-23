@@ -1,3 +1,5 @@
+// @refresh reload
+
 // import React from "react";
 // import { createRoot } from "react-dom/client";
 
@@ -5,7 +7,7 @@ import { render } from "solid-js/web";
 
 import App from "./App.tsx";
 import "./index.css";
-import { Notice, Plugin } from "obsidian";
+import { MarkdownRenderChild, Notice, Plugin } from "obsidian";
 
 export default class ObsidianVite extends Plugin {
   onload(): void {
@@ -29,7 +31,17 @@ export default class ObsidianVite extends Plugin {
         // 	</React.StrictMode>
         // );
 
-        render(() => <App source={source} ctx={ctx} />, el);
+        const dispose = render(() => <App source={source} ctx={ctx} />, el);
+
+        /* 
+        the registerMarkdownCodeBlockProcessor callback is called
+        every time the code block is rendered. Doing the below
+        will cause the associated mdChild to tell solid to dispose
+        of this root and not track its context.
+        */
+        const mdChild = new MarkdownRenderChild(el);
+        mdChild.register(dispose);
+        ctx.addChild(mdChild);
       },
     );
   }

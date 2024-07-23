@@ -41,6 +41,8 @@ export default class ObsidianVite extends Plugin {
         */
         const mdChild = new MarkdownRenderChild(el);
         mdChild.register(dispose);
+        // Do this for React
+        // mdChild.register(root.unmount)
         ctx.addChild(mdChild);
       },
     );

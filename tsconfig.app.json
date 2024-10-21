@@ -2,9 +2,9 @@
 	"compilerOptions": {
 		"composite": true,
 		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-		"target": "ES2020",
+		"target": "ESNext",
 		"useDefineForClassFields": true,
-		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
 		"module": "ESNext",
 		"skipLibCheck": true,
 
@@ -16,18 +16,15 @@
 		"moduleDetection": "force",
 		"noEmit": true,
 
-		/* React */
-		/* "jsx": "react-jsx", */
-
-		/* Solid */
-		"jsx": "preserve",
-		"jsxImportSource": "solid-js",
-
 		/* Linting */
 		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+		"baseUrl": "./",
+		"paths": {
+			"@/*": ["./src/*"]
+		}
 	},
 	"include": ["src"]
 }

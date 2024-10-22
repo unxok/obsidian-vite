@@ -3,22 +3,23 @@
 This is a template repository for an [Obsidian](obsidian.com) plugin bundled with [Vitejs](https://vitejs.dev).
 
 > [!WARNING]
-> As of right now, this template <u>is for my use only</u>. 
-> 
+> As of right now, this template <u>is for my use only</u>.
+>
 > There are a few things I want to do prior to advertising this for others to use:
-> - [ ] Add i18next stuff
+>
+> - [x] Add i18next stuff
 > - [ ] Fix up eslint stuff (I don't really use eslint personally)
 > - [ ] Make an NPM create script
->     - [ ] inputs for plugin name variations and author name
->     - [ ] Add choice of SCSS or PostCSS
->     - [ ] Add choice for sample code in plugin class
->     - [ ] Add framework choices
->        - [ ] vanilla typescript
->        - [ ] Solid
->        - [ ] React
->        - [ ] Svelte
->        - [ ] Vue 
->     - [ ] Add choice for testing framework (choices or just Vitest?) (I haven't really used unit tests ever)
+>   - [ ] inputs for plugin name variations and author name
+>   - [ ] Add choice of SCSS or PostCSS
+>   - [ ] Add choice for sample code in plugin class
+>   - [ ] Add framework choices
+>     - [ ] vanilla typescript
+>     - [ ] Solid
+>     - [ ] React
+>     - [ ] Svelte
+>     - [ ] Vue
+>   - [ ] Add choice for testing framework (choices or just Vitest?) (I haven't really used unit tests ever)
 
 ## Usage
 
@@ -38,5 +39,3 @@ This is a template repository for an [Obsidian](obsidian.com) plugin bundled wit
 # License
 
 MIT
-
-

@@ -1,8 +1,6 @@
 export type LanguageResource = {
-    someText: string;
-    some: {
-        nested: {
-            text: string;
-        }
-    }
-}
+	hello: string;
+	good: {
+		morning: string;
+	};
+};

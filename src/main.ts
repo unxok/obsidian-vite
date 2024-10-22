@@ -21,6 +21,8 @@ export default class ObsidianVite extends Plugin {
 
 
 
+
+
 class ObsidianViteSettingTab extends PluginSettingTab {
     display(): void {
         const {containerEl} = this;

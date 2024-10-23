@@ -3,7 +3,7 @@
 This is a template repository for an [Obsidian](obsidian.com) plugin bundled with [Vitejs](https://vitejs.dev).
 
 > [!WARNING]
-> As of right now, this template <u>is for my use only</u>.
+> As of right now, this template <u>is inteded for my use only</u>. You are welcome to use it, however I cannot guarantee the quality of it.
 >
 > There are a few things I want to do prior to advertising this for others to use:
 >

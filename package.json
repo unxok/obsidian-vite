@@ -8,7 +8,6 @@
 	"scripts": {
 		"dev": "vite build --watch --mode=development",
 		"build": "vite build",
-		"lint": "eslint . --report-unused-disable-directives --max-warnings 0",
 		"version": "node version-bump.mjs && git add manifest.json versions.json",
 		"release": "git tag -a %npm_config_tag% -m '%npm_config_tag%' && git push origin %npm_config_tag%"
 	},

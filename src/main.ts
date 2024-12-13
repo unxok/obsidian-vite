@@ -17,6 +17,7 @@ export default class ObsidianVite extends Plugin {
 class ObsidianViteSettingTab extends PluginSettingTab {
 	display(): void {
 		const { containerEl } = this;
+		containerEl.empty();
 
 		new Setting(containerEl)
 			.setName("A sample setting")
